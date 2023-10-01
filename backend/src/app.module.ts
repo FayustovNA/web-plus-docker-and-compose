@@ -19,12 +19,14 @@ import config from './configuration/configuration';
       load: [config],
       envFilePath: !process.env.NODE_ENV
         ? '.env'
-        : `.env.${process.env.NODE_ENV}`
+        : `.env.${process.env.NODE_ENV}`,
     }),
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
-      useFactory: async (configService: ConfigService): Promise<TypeOrmModuleOptions> => ({
+      useFactory: async (
+        configService: ConfigService,
+      ): Promise<TypeOrmModuleOptions> => ({
         type: 'postgres',
         host: configService.get('db_host'),
         port: configService.get('db_port'),
