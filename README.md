@@ -1,3 +1,5 @@
 # Докеризация приложения
 
-Перед тем как приступить к выполнению проектной работы разместите в репозитории исходный код фронтенд и бэкенд частей сервиса КупиПодариДай, реализованного вами ранее. 
+* IP: http://158.160.34.95
+* Frontend: https://nafayustov.nomoredomainsrocks.ru
+* Backend: https://api.nafayustov.nomoredomainsrocks.ru
