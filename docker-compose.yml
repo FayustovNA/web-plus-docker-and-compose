@@ -10,18 +10,16 @@ services:
       - db-network
     volumes:
       - db-volume:/var/lib/postgresql/data
-    env_file:
-      - .env
+    env_file: backend/.env
 
   backend:
     container_name: kupipodariday-back
     build: backend
-    restart: "unless-stopped"
+    restart: "always"
     networks:
       - db-network
       - frontend-network
-    env_file:
-      - .env
+    env_file: backend/.env
     ports:
       - "4000:3000"
     depends_on:
@@ -30,7 +28,7 @@ services:
   frontend:
     container_name: kupipodariday-front
     build: frontend
-    restart: "unless-stopped"
+   restart: "always"
     networks:
       - frontend-network
     ports:
