@@ -40,7 +40,6 @@ networks:
   db-network:
   frontend-network:
 
-
 volumes:
   db-volume:
 
