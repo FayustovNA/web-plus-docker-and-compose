@@ -4,12 +4,12 @@ services:
 
   postgres:
     container_name: db
-    image: "postgres"
+    image: "postgres:12.12-alpine"
     restart: "unless-stopped"
     networks:
       - db-network
     volumes:
-      - db-volume: var/lib/postgres/data
+      - db-volume:${POSTGRES_PGDATA}
     env_file:
       - .env
 
