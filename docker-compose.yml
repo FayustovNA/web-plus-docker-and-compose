@@ -8,6 +8,10 @@ services:
     restart: "unless-stopped"
     networks:
       - db-network
+    environment:
+      POSTGRES_USER: student
+      POSTGRES_PASSWORD: student
+      POSTGRES_NAME: kupipodariday
     volumes:
       - db-volume:${POSTGRES_PGDATA}
     env_file:
