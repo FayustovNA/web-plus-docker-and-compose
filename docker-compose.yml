@@ -4,7 +4,7 @@ services:
 
   postgres:
     container_name: db
-    image: "postgres:13"
+    image: "postgres"
     restart: "unless-stopped"
     networks:
       - db-network

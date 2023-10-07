@@ -8,3 +8,4 @@ export default () => ({
     secret_jwt: process.env.SECRET_JWT || 'VerySecret',
     expire_jwt: process.env.EXPIRE_JWT || 86000,
 });
+
