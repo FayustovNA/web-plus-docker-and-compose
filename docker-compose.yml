@@ -9,7 +9,7 @@ services:
     networks:
       - db-network
     volumes:
-      - db-volume:/var/lib/postgresql/data
+      - db-volume: /data/postgres
     env_file:
       - .env
 
